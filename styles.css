@@ -32,6 +32,7 @@ main {
     width: 60vw;
     height: 60vh;
     border-radius: 10px;
+    z-index: 10;
 }
 #banner {
     height: 5vh;
@@ -70,6 +71,13 @@ main {
     position: absolute;
     right: 50px;
     bottom: 50px;
+}
+
+#catImg {
+    position: static;
+    left: 50px;
+    top: 50px;
+    z-index: 1;
 }
 
 /* Evie Mode */
