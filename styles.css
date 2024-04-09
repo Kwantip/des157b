@@ -6,12 +6,27 @@ body {
     font-family: "Pixelify Sans", sans-serif;
 }
 
+h1 {
+    font-size: 50px;
+    color: #d64807;
+}
+h1 strong {
+    font-family: "Yarndings 12", system-ui;
+}
+@keyframes headingAnimation {
+    0% {transform: translateY(0%);}
+    25% {transform: translateY(50%);}
+    50% {transform: translateY(100%);}
+    75% {transform: translateY(50%);}
+    100% {transform: translateY(0%);}
+}
 
 nav {
     display: flex;
     flex-direction: column;
     position: absolute;
     right: 50px;
+    top: 50px;
 }
 a {
     text-decoration: none;
@@ -25,6 +40,7 @@ a {
 .files p {
     padding: 5px;
     border-radius: 20px;
+    color: #FFF2D9;
 }
 
 main {
@@ -33,6 +49,7 @@ main {
     height: 60vh;
     border-radius: 10px;
     z-index: 10;
+    position: absolute;
 }
 #banner {
     height: 5vh;
@@ -67,23 +84,63 @@ main {
     display: block;
 }
  
-#modeChange {
+/* #modeChange {
     position: absolute;
     right: 50px;
     bottom: 50px;
-}
+} */
 
 #catImg {
-    position: static;
-    left: 50px;
-    top: 50px;
+    position: absolute;
+    left: 75px;
+    bottom: 5px;
+    overflow-y: hidden;
     z-index: 1;
+}
+
+#modeChange {
+    width: 100px;
+    height: 50px;
+    background-color: red;
+    border-radius: 50px;
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    cursor: pointer;
+    transition: 2s ease-in-out;
+    /* z-index: 2; */
+}
+#otherThingy {
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    border-radius: 50px;
+    position: absolute;
+    top: 5px;
+    transition: 2s ease-in-out;
+    /* z-index: 3; */
+}
+.evieMode {
+    left: 5px;
+    transition: 2s ease-in-out;
+}
+.noriMode {
+    right: 5px;
+    transition: 2s ease-in-out;
 }
 
 /* Evie Mode */
 .evie {
     background-color: #FFD568;
     animation: toEvie 2s ease;
+}
+.evie .files p {
+    background-color: #FF8165;
+    /* color: #FFF2D9; */
+}
+.evie .files:hover p {
+    background-color: #FFF2D9;
+    color: #FF8165;
 }
 .evie main {
     background-color: #FFF2D9;
@@ -99,10 +156,6 @@ main {
 .evie #banner p#x {
     border: 3px solid #6A3F20;
 }
-.evie .files p {
-    background-color: #FF8165;
-    color: #FFF2D9;
-}
 @keyframes toEvie {
     from {background-color: #6A3F20;}
     to {background-color: #FFD568;}
@@ -112,6 +165,14 @@ main {
 .nori {
     background-color: #6A3F20;
     animation: toNori 2s ease;
+}
+.nori .files p {
+    background-color: #E98A1E;
+    /* color: #6A3F20; */
+}
+.nori .files:hover p {
+    background-color: #FFF2D9;
+    color: #E98A1E;
 }
 .nori main {
     background-color: #bb9376;
@@ -126,10 +187,6 @@ main {
 }
 .nori #banner p#x {
     border: 3px solid #FFF2D9;
-}
-.nori .files p {
-    background-color: #FFA96A;
-    color: #6A3F20;
 }
 @keyframes toNori {
     from {background-color: #FFD568;}

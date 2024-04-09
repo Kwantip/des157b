@@ -9,6 +9,9 @@
     const xBtn = document.getElementById("x");
     const catImg = document.getElementById("catImg");
 
+    const thingy = document.getElementById("thingy");
+    const otherThingy = document.getElementById("otherThingy");
+
     let mode = "evie";
 
     // Initial setup
@@ -32,11 +35,23 @@
         openedWindow.classList = "vis";
     });
 
+    // thingy.addEventListener("click", function() {
+    //     if (mode == "evie") {
+    //         mode = "nori";
+    //         otherThingy.classList = "noriMode";
+    //     } else {
+    //         mode = "evie"
+    //         otherThingy.classList = "evieMode";
+    //     }
+    // });
+
     function switchMode() {
         if (mode == "evie") {
             mode = "nori";
+            otherThingy.classList = "noriMode";
         } else {
             mode = "evie"
+            otherThingy.classList = "evieMode";
         }
         switch (mode) {
             case "evie":
