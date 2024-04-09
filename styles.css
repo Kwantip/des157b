@@ -1,0 +1,129 @@
+:root {
+    --mode: evie;
+}
+
+body {
+    font-family: "Pixelify Sans", sans-serif;
+}
+
+
+nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 50px;
+}
+a {
+    text-decoration: none;
+}
+.files {
+    margin: auto;
+    text-align: center;
+    max-width: 150px;
+    cursor: pointer;
+}
+.files p {
+    padding: 5px;
+    border-radius: 20px;
+}
+
+main {
+    background-color: red;
+    width: 60vw;
+    height: 60vh;
+    border-radius: 10px;
+}
+#banner {
+    height: 5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+#banner #windowLabel {
+    font-size: 20px;
+}
+#banner p#x {
+    font-family: "Yarndings 12", system-ui;
+    color: white;
+    background-color: #ff6565;
+    font-size: 30px;
+    margin: 0;
+    height: 4vh; 
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.invis {
+    display: none;
+}
+.vis {
+    display: block;
+}
+ 
+#modeChange {
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+}
+
+/* Evie Mode */
+.evie {
+    background-color: #FFD568;
+    animation: toEvie 2s ease;
+}
+.evie main {
+    background-color: #FFF2D9;
+    border: 3px solid #6A3F20;
+}
+.evie #banner {
+    background-color: #FF8933;
+    border-bottom: 3px solid #6A3F20;
+}
+.evie #banner #windowLabel {
+    color: #6A3F20;
+}
+.evie #banner p#x {
+    border: 3px solid #6A3F20;
+}
+.evie .files p {
+    background-color: #FF8165;
+    color: #FFF2D9;
+}
+@keyframes toEvie {
+    from {background-color: #6A3F20;}
+    to {background-color: #FFD568;}
+}
+
+/* Nori Mode */
+.nori {
+    background-color: #6A3F20;
+    animation: toNori 2s ease;
+}
+.nori main {
+    background-color: #bb9376;
+    border: 3px solid #FFF2D9;
+}
+.nori #banner {
+    background-color: #533410;
+    border-bottom: 3px solid #FFF2D9;
+}
+.nori #banner #windowLabel {
+    color: #FFF2D9;
+}
+.nori #banner p#x {
+    border: 3px solid #FFF2D9;
+}
+.nori .files p {
+    background-color: #FFA96A;
+    color: #6A3F20;
+}
+@keyframes toNori {
+    from {background-color: #FFD568;}
+    to {background-color: #6A3F20;}
+}
