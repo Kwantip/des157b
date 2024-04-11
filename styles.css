@@ -4,14 +4,16 @@
 
 body {
     font-family: "Pixelify Sans", sans-serif;
+    overflow: hidden;
 }
 
 h1 {
     font-size: 50px;
-    color: #d64807;
+    color: #6A3F20;
+    padding-left: 5vw;
 }
 h1 strong {
-    font-family: "Yarndings 12", system-ui;
+    font-family: "Yarndings 20", system-ui;
 }
 @keyframes headingAnimation {
     0% {transform: translateY(0%);}
@@ -47,9 +49,10 @@ main {
     background-color: red;
     width: 60vw;
     height: 60vh;
-    border-radius: 10px;
+    border-radius: 15px;
     z-index: 10;
     position: absolute;
+    left: 25px;
 }
 #banner {
     height: 5vh;
@@ -64,7 +67,7 @@ main {
     font-size: 20px;
 }
 #banner p#x {
-    font-family: "Yarndings 12", system-ui;
+    font-family: "Yarndings 20", system-ui;
     color: white;
     background-color: #ff6565;
     font-size: 30px;
@@ -83,19 +86,27 @@ main {
 .vis {
     display: block;
 }
- 
-/* #modeChange {
-    position: absolute;
-    right: 50px;
-    bottom: 50px;
-} */
 
-#catImg {
+#catImgPos {
     position: absolute;
-    left: 75px;
-    bottom: 5px;
+    left: 350px;
+    bottom: -200px;
     overflow-y: hidden;
+}
+#catImg {
     z-index: 1;
+}
+
+#dateAndTime {
+    font-family: "Chakra Petch", sans-serif;
+    font-size: 32px;
+    position: absolute;
+    left: 25px;
+    bottom: 25px;
+}
+#timeDisp p {
+    font-size: 64px;
+    margin-bottom: 0;
 }
 
 #modeChange {
@@ -104,11 +115,9 @@ main {
     background-color: red;
     border-radius: 50px;
     position: absolute;
-    right: 50px;
+    right: 75px;
     bottom: 50px;
     cursor: pointer;
-    transition: 2s ease-in-out;
-    /* z-index: 2; */
 }
 #otherThingy {
     width: 40px;
@@ -117,22 +126,17 @@ main {
     border-radius: 50px;
     position: absolute;
     top: 5px;
-    transition: 2s ease-in-out;
-    /* z-index: 3; */
-}
-.evieMode {
-    left: 5px;
-    transition: 2s ease-in-out;
-}
-.noriMode {
-    right: 5px;
-    transition: 2s ease-in-out;
+    transition: 1s ease-in-out;
 }
 
 /* Evie Mode */
 .evie {
     background-color: #FFD568;
-    animation: toEvie 2s ease;
+    /* animation: toEvie 2s ease; */
+    transition: 2s ease;
+}
+.evie h1, .evie #dateAndTime {
+    color: #6A3F20;
 }
 .evie .files p {
     background-color: #FF8165;
@@ -142,9 +146,18 @@ main {
     background-color: #FFF2D9;
     color: #FF8165;
 }
+.evie #modeChange {
+    background-color: #FF8933;
+}
+.evie #otherThingy {
+    background-color: #6A3F20;
+}
+.evie .evieMode {
+    left: 5px;
+}
 .evie main {
     background-color: #FFF2D9;
-    border: 3px solid #6A3F20;
+    border: 5px solid #6A3F20;
 }
 .evie #banner {
     background-color: #FF8933;
@@ -164,7 +177,11 @@ main {
 /* Nori Mode */
 .nori {
     background-color: #6A3F20;
-    animation: toNori 2s ease;
+    transition: 2s ease;
+    /* animation: toNori 2s ease; */
+}
+.nori h1, .nori #dateAndTime {
+    color: #FFF2D9;
 }
 .nori .files p {
     background-color: #E98A1E;
@@ -174,9 +191,18 @@ main {
     background-color: #FFF2D9;
     color: #E98A1E;
 }
+.nori #modeChange {
+    background-color: #533410;
+}
+.nori #otherThingy {
+    background-color: #FFD568;
+}
+.nori .noriMode {
+    left: 55px;
+}
 .nori main {
     background-color: #bb9376;
-    border: 3px solid #FFF2D9;
+    border: 5px solid #FFF2D9;
 }
 .nori #banner {
     background-color: #533410;

@@ -8,8 +8,9 @@
     const windowLabel = document.getElementById("windowLabel");
     const xBtn = document.getElementById("x");
     const catImg = document.getElementById("catImg");
+    const dateDisp = document.getElementById("dateDisp");
+    const timeDisp = document.getElementById("timeDisp");
 
-    const thingy = document.getElementById("thingy");
     const otherThingy = document.getElementById("otherThingy");
 
     let mode = "evie";
@@ -17,7 +18,14 @@
     // Initial setup
     page.classList = "evie"
 
+    // Date and time
+    updateTime();
+    setInterval(updateTime, 1000);
+
+    // Switch mode button
     modeChangeBtn.addEventListener("click", switchMode);
+
+    // Open pop-up window
     folders[0].addEventListener("click", function() {
         windowLabel.innerHTML = "Ministudios and Toolkit";
         openedWindow.classList = "vis";
@@ -34,16 +42,10 @@
         windowLabel.innerHTML = "Capstone";
         openedWindow.classList = "vis";
     });
-
-    // thingy.addEventListener("click", function() {
-    //     if (mode == "evie") {
-    //         mode = "nori";
-    //         otherThingy.classList = "noriMode";
-    //     } else {
-    //         mode = "evie"
-    //         otherThingy.classList = "evieMode";
-    //     }
-    // });
+    // Close pop-up window
+    xBtn.addEventListener("click", function() {
+        openedWindow.classList = "invis";
+    });
 
     function switchMode() {
         if (mode == "evie") {
@@ -70,8 +72,9 @@
                 break;
         }
     }
-
-    xBtn.addEventListener("click", function() {
-        openedWindow.classList = "invis";
-    });
+    function updateTime() {
+        let now = new Date();
+        dateDisp.innerHTML = `<p>${now.toLocaleDateString()}</p>`
+        timeDisp.innerHTML = `<p>${now.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</p>`;
+    }
 })();
