@@ -47,6 +47,28 @@
         openedWindow.classList = "invis";
     });
 
+    // Pet the cat
+    catImg.addEventListener("mouseover", function() {
+        if (mode == "evie") {
+            catImg.src = "images/catEvieModePet.png";
+        } else if (mode == "nori") {
+            catImg.src = "images/catNoriModePet.png";
+        }
+    });
+    catImg.addEventListener("mouseout", function() {
+        if (mode == "evie") {
+            catImg.src = "images/catEvieMode.png";
+        } else if (mode == "nori") {
+            catImg.src = "images/catNoriMode.png";
+        }
+    });
+
+    // Cat blink
+    // setInterval(blink, 5000);
+    // function blink() {
+    //     catImg.src = "images/catEvieModePet.png";
+    // }
+
     function switchMode() {
         if (mode == "evie") {
             mode = "nori";
