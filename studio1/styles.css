@@ -1,0 +1,50 @@
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    filter: blur(5px);
+}
+
+.top-left, .bottom-right, .center {
+    background-color: rgb(21, 21, 21);
+    color: white;
+    padding: 10px 15px;
+    font-size: 3em;
+    position: absolute;
+    transition: all 1s;
+    cursor: default;
+}
+.top-left {
+    top: 5%;
+    left: 10%;
+}
+.bottom-right {
+    bottom: 5%;
+    right: 10%;
+}
+.center {
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.focused {
+    /* background-color: blue; */
+    color: white;
+    font-size: 10em;
+    font-family: "Oswald", sans-serif;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    transition: all 1s;
+    cursor: pointer;
+}
+
+.hidden {
+    opacity: 0;
+}
+.showing {
+    opacity: 1;
+}
