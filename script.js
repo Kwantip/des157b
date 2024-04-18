@@ -4,6 +4,7 @@
     const page = document.querySelector("body");
     const modeChangeBtn = document.getElementById("modeChange");
     const folders = document.querySelectorAll(".folders");
+    const folderImgs = document.querySelectorAll(".folders img");
     const openedWindow = document.querySelector("main");
     const windowLabel = document.getElementById("windowLabel");
     const xBtn = document.getElementById("x");
@@ -80,19 +81,21 @@
         switch (mode) {
             case "evie":
                 page.classList = "evie";
-                for (let i = 0; i < folders.length; i++) {
-                    folders[i].src = "images/folderEvieMode.png"
+                for (let i = 0; i < folderImgs.length; i++) {
+                    folderImgs[i].src = "images/folderEvieMode.png"
                 }
                 catImg.src = "images/catEvieMode.png";
                 break;
             case "nori":
                 page.classList = "nori";
-                for (let i = 0; i < folders.length; i++) {
-                    folders[i].src = "images/folderNoriMode.png"
+                for (let i = 0; i < folderImgs.length; i++) {
+                    folderImgs[i].src = "images/folderNoriMode.png"
                 }
                 catImg.src = "images/catNoriMode.png"
                 break;
         }
+        console.log(mode);
+
     }
     function updateTime() {
         let now = new Date();
