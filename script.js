@@ -8,6 +8,10 @@
     const openedWindow = document.querySelector("main");
     const windowLabel = document.getElementById("windowLabel");
     const xBtn = document.getElementById("x");
+    const miniStudioAndToolKitContent = document.getElementById("miniStudioAndToolKitContent");
+    const researchContent = document.getElementById("researchContent");
+    const developmentContent = document.getElementById("developmentContent");
+    const capstoneContent = document.getElementById("capstoneContent");
     const catImg = document.getElementById("catImg");
     const dateDisp = document.getElementById("dateDisp");
     const timeDisp = document.getElementById("timeDisp");
@@ -30,22 +34,31 @@
     folders[0].addEventListener("click", function() {
         windowLabel.innerHTML = "Ministudios and Toolkit";
         openedWindow.classList = "vis";
+        resetWindowContent();
+        miniStudioAndToolKitContent.classList = "vis";
     });
     folders[1].addEventListener("click", function() {
         windowLabel.innerHTML = "Research";
         openedWindow.classList = "vis";
+        resetWindowContent();
+        researchContent.classList = "vis";
     });
     folders[2].addEventListener("click", function() {
         windowLabel.innerHTML = "Development";
         openedWindow.classList = "vis";
+        resetWindowContent();
+        developmentContent.classList = "vis";
     });
     folders[3].addEventListener("click", function() {
         windowLabel.innerHTML = "Capstone";
         openedWindow.classList = "vis";
+        resetWindowContent();
+        capstoneContent.classList = "vis";
     });
     // Close pop-up window
     xBtn.addEventListener("click", function() {
         openedWindow.classList = "invis";
+        resetWindowContent();
     });
 
     // Pet the cat
@@ -101,5 +114,11 @@
         let now = new Date();
         dateDisp.innerHTML = `<p>${now.toLocaleDateString()}</p>`
         timeDisp.innerHTML = `<p>${now.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</p>`;
+    }
+    function resetWindowContent() {
+        miniStudioAndToolKitContent.classList = "invis";
+        researchContent.classList = "invis";
+        developmentContent.classList = "invis";
+        capstoneContent.classList = "invis";
     }
 })();

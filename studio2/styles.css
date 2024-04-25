@@ -1,0 +1,34 @@
+
+body {
+    height: calc(3 * 8 * 100vh);
+}
+.arc {
+    position: relative;
+
+}
+.arc .moving, .arc .static {
+    position: fixed;
+    top: 5%;
+    left: 25%;
+    border-radius: 100%;
+    width: 500px;
+    height: 500px;
+    border: 75px solid;
+}
+.arc .moving {
+    border-color: transparent transparent transparent red;
+    transform: rotate(135deg);
+    transition: 2s ease;
+    z-index: 10;
+}
+.arc .static {
+    border-color: transparent transparent blue blue;
+    transform: rotate(225deg);
+}
+.arc p {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -125%);
+    font-size: 120px;
+}
