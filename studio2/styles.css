@@ -18,11 +18,11 @@ body {
 .arc .moving {
     border-color: transparent transparent transparent red;
     transform: rotate(135deg);
-    transition: 2s ease;
+    transition: 1s ease;
     z-index: 10;
 }
 .arc .static {
-    border-color: transparent transparent blue blue;
+    border-color: transparent transparent blue transparent;
     transform: rotate(225deg);
 }
 .arc p {

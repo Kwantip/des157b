@@ -92,6 +92,7 @@ main ul li {
 .files p {
     padding: 5px 10px;
     border-radius: 20px;
+    text-align: center;
 }
 #banner {
     height: 5vh;
