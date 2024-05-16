@@ -1,0 +1,19 @@
+body {
+    margin: 0px;
+}
+#demo li {
+    margin: 0px;
+}
+
+#popUpImg {
+    margin: auto;
+    position: absolute;
+    z-index: 10;
+}
+
+.invis {
+    display: none;
+}
+.vis {
+    display: block;
+}
