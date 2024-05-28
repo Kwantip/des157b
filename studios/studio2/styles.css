@@ -1,0 +1,93 @@
+
+body {
+    height: calc(3 * 8 * 100vh);
+    /* background-color: rgb(40, 40, 40); */
+    transition: 1s ease-in;
+}
+#info {
+    font-size: 36px;
+    position: fixed;
+    top: 2%;
+    left: 1%;
+    cursor: pointer;
+}
+#popUp {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(230, 230, 230);
+    width: 50vw;
+    border: 8px black dashed;
+    border-radius: 20px;
+    z-index: 100;
+    padding: 25vh 0px;
+}
+#popUp i {
+    position: absolute;
+    top: 5%;
+    right: 3%;
+    font-size: 32px;
+    cursor: pointer;
+}
+#popUp p {
+    padding: 50px 30px;
+    font-family: "Kulim Park", sans-serif;
+    font-size: 18px;
+}
+.arc {
+    position: relative;
+
+}
+.arc .moving, .arc .static {
+    position: fixed;
+    top: 2.5%;
+    left: 25%;
+    border-radius: 100%;
+    width: 75vh;
+    height: 75vh;
+    border: 75px solid;
+}
+.arc .moving {
+    border-color: transparent transparent rgb(255, 209, 27) transparent;
+    transform: rotate(135deg);
+    transition: 0.25s ease;
+    z-index: 10;
+}
+.arc .static {
+    border-color: gray gray gray gray;
+    transform: rotate(225deg);
+    transition: 2s ease;
+}
+#content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-45%, -50%);
+    width: 70vh;
+    font-size: 120px;
+    margin: 0px;
+    /* width: 50vw; */
+}
+#time, #num {
+    text-align: center;
+    transition: 1s ease;
+    font-family: "Tektur", sans-serif;
+}
+#content #mood #face {
+    font-size: 75px;
+    margin: auto;
+    text-align: center;
+}
+#content #mood #description {
+    font-size: 24px;
+    font-family: "Kulim Park", sans-serif;
+    width: 65vh;
+}
+
+.vis {
+    display: block;
+}
+.invis {
+    display: none;
+}

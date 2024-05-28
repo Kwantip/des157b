@@ -1,0 +1,10 @@
+body {
+    margin: 0px;
+    background-color: #BF9E74;
+}
+#scrollingScreen {
+    background-color: #BF9E74;
+}
+#scrollingScreen li {
+    margin: 0px;
+}

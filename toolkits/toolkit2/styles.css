@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    font-family: "Lexend Giga", sans-serif;
+}
+h1 {
+    background-color: green;
+    color: white;
+    margin: 0;
+    height: 100px;
+    font-weight: 600;
+    font-size: 45px;
+    padding-left: 20px;
+}
+p {
+    width: 650px;
+    margin: auto;
+    padding: 50px 0px;
+    font-weight: 200;
+}
+#mapContainer {
+    background-color: rgb(210, 255, 184);
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#map {
+    height: 450px;
+    width: 500px;
+    border: 10px double rgb(6, 60, 6);
+}

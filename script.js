@@ -8,7 +8,8 @@
     const openedWindow = document.querySelector("main");
     const windowLabel = document.getElementById("windowLabel");
     const xBtn = document.getElementById("x");
-    const miniStudioAndToolKitContent = document.getElementById("miniStudioAndToolKitContent");
+    const miniStudioContent = document.getElementById("miniStudioContent");
+    const toolKitContent = document.getElementById("toolKitContent");
     const researchContent = document.getElementById("researchContent");
     const developmentContent = document.getElementById("developmentContent");
     const capstoneContent = document.getElementById("capstoneContent");
@@ -32,24 +33,30 @@
 
     // Open pop-up window
     folders[0].addEventListener("click", function() {
-        windowLabel.innerHTML = "Ministudios and Toolkit";
+        windowLabel.innerHTML = "Ministudios";
         openedWindow.classList = "vis";
         resetWindowContent();
-        miniStudioAndToolKitContent.classList = "vis";
+        miniStudioContent.classList = "vis";
     });
     folders[1].addEventListener("click", function() {
+        windowLabel.innerHTML = "Toolkits";
+        openedWindow.classList = "vis";
+        resetWindowContent();
+        toolKitContent.classList = "vis";
+    });
+    folders[2].addEventListener("click", function() {
         windowLabel.innerHTML = "Research";
         openedWindow.classList = "vis";
         resetWindowContent();
         researchContent.classList = "vis";
     });
-    folders[2].addEventListener("click", function() {
+    folders[3].addEventListener("click", function() {
         windowLabel.innerHTML = "Development";
         openedWindow.classList = "vis";
         resetWindowContent();
         developmentContent.classList = "vis";
     });
-    folders[3].addEventListener("click", function() {
+    folders[4].addEventListener("click", function() {
         windowLabel.innerHTML = "Capstone";
         openedWindow.classList = "vis";
         resetWindowContent();
@@ -116,7 +123,8 @@
         timeDisp.innerHTML = `<p>${now.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</p>`;
     }
     function resetWindowContent() {
-        miniStudioAndToolKitContent.classList = "invis";
+        toolKitContent.classList = "invis";
+        miniStudioContent.classList = "invis";
         researchContent.classList = "invis";
         developmentContent.classList = "invis";
         capstoneContent.classList = "invis";

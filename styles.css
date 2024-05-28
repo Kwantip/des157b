@@ -32,6 +32,7 @@ h1 strong {
 nav {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     position: absolute;
     right: 50px;
     top: 50px;

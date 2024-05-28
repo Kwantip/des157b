@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- https://www.jqueryscript.net/animation/Endless-Horizontal-Content-Scroller-Plugin-For-jQuery-endlessRiver.html -->
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="js/endlessRiver.js"></script>
+    <link rel="stylesheet" href="css/endlessRiver.css">
+
+    <!-- https://www.jqueryscript.net/lightbox/Customizable-jQuery-Modal-Dialog-Plugin-with-CSS3-Animations-jAlert.html -->
+    <link href="src/jAlert.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
+
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#scrollingScreen").endlessRiver({
+                pause: false
+            });
+        });
+    </script>
+</head>
+<body>
+    <ul id="scrollingScreen">
+          <li><img src="images/bag.jpg" width="595" id="bag" alt="a scene with bags and boxes"></li>
+          <li><img src="images/basket.jpg" width="595" id="basket" alt="a scene with a dresser and a cat basket"></li>
+          <li><img src="images/tree.jpg" width="595" id="tree" alt="a scene with a cat tree"></li>
+          <li><img src="images/couch.jpg" width="595" id="couch" alt="a scene with a couch"></li>
+    </ul>
+
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script src="src/jAlert.js"></script>
+    <script src="src/jAlert-functions.js"></script>
+
+</body>
+</html>
