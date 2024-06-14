@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- https://www.jqueryscript.net/animation/Endless-Horizontal-Content-Scroller-Plugin-For-jQuery-endlessRiver.html -->
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="js/endlessRiver.js"></script>
+    <link rel="stylesheet" href="css/endlessRiver.css">
+
+    <!-- https://www.jqueryscript.net/lightbox/Customizable-jQuery-Modal-Dialog-Plugin-with-CSS3-Animations-jAlert.html -->
+    <link href="src/jAlert.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
+
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#scrollingScreen").endlessRiver({
+                pause: false
+            });
+        });
+    </script>
+</head>
+<body>
+    <ul id="scrollingScreen">
+          <li><img src="images/truck.jpg" id="truck" alt="a street scene with a parked truck"></li>
+          <li><img src="images/disabledParking.jpg" id="disabledParking" alt="a scene with a parking spot for people with disability"></li>
+          <li><img src="images/bus.jpg" id="bus" alt="a scene with a bus"></li>
+          <li><img src="images/crosswalk.jpg" id="crosswalk" alt="a scene of a crosswalk"></li>
+          <li><img src="images/car.jpg" id="car" alt="a scene with a car and bus stop"></li>
+          <li><img src="images/parkingStructure.jpg" id="parkingStructure" alt="a scence with a parking structure"></li>
+          <li><img src="images/speedLimit.jpg" id="speedLimit" alt="a scene with a speed limit sign"></li>
+    </ul>
+
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script src="src/jAlert.js"></script>
+    <script src="src/jAlert-functions.js"></script>
+
+</body>
+</html>

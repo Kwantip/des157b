@@ -1,0 +1,12 @@
+body {
+    margin: 0px;
+}
+
+img {
+    width: auto;
+    height: 100vh;
+}
+
+#scrollingScreen li {
+    margin: 0px;
+}
